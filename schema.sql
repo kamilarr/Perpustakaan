@@ -8,13 +8,13 @@ CREATE TABLE books (
     judul VARCHAR(255) NOT NULL,
     penulis VARCHAR(100) NOT NULL,
     kategori VARCHAR(50),
-    status ENUM('tersedia','dipinjam') DEFAULT 'tersedia'
+    stok INT DEFAULT 1,
 );
 
 -- Insert dummy buku
-INSERT INTO books (judul, penulis, kategori, status) VALUES
-('Laskar Pelangi', 'Andrea Hirata', 'Novel', 'tersedia'),
-('Algoritma dan Pemrograman', 'Rinaldi Munir', 'Pendidikan', 'tersedia'),
-('Harry Potter and the Sorcerer''s Stone', 'J.K. Rowling', 'Fantasy', 'dipinjam'),
-('Filosofi Teras', 'Henry Manampiring', 'Self Development', 'tersedia'),
-('Clean Code', 'Robert C. Martin', 'Pendidikan', 'tersedia');
+INSERT INTO books (judul, penulis, kategori, stok) VALUES
+('Laskar Pelangi', 'Andrea Hirata', 'Novel', '5'),
+('Algoritma dan Pemrograman', 'Rinaldi Munir', 'Pendidikan', '3'),
+('Harry Potter and the Sorcerer''s Stone', 'J.K. Rowling', 'Fantasy', '2'),
+('Filosofi Teras', 'Henry Manampiring', 'Self Development', '4'),
+('Clean Code', 'Robert C. Martin', 'Pendidikan', '2');
