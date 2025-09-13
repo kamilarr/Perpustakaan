@@ -1,6 +1,12 @@
 <?php
-// Copy to config.php and fill values
 define('DB_HOST','127.0.0.1');
 define('DB_USER','user');
 define('DB_PASS','user123');
-// no default DBNAME because queries will call db_buku.* and db_peminjaman.*
+
+$conn_buku = mysqli_connect(DB_HOST, DB_USER, DB_PASS, 'db_buku');
+$conn_peminjaman = mysqli_connect(DB_HOST, DB_USER, DB_PASS, 'db_peminjaman');
+
+if (!$conn_buku || !$conn_peminjaman) {
+    die("Koneksi gagal: " . mysqli_connect_error());
+}
+?>
