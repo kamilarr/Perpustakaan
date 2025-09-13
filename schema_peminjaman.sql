@@ -18,12 +18,11 @@ INSERT INTO users (username, password) VALUES
 CREATE TABLE peminjaman (
     peminjaman_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT,
-    buku_id INT,
+    buku_id INT, -- tidak pakai FOREIGN KEY ke db_buku
     tanggal_pinjam DATE NOT NULL,
     tanggal_kembali DATE,
     status ENUM('dipinjam','kembali') DEFAULT 'dipinjam',
-    FOREIGN KEY (user_id) REFERENCES users(user_id),
-    FOREIGN KEY (buku_id) REFERENCES books(buku_id)
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
 -- Insert dummy peminjaman (contoh Harry Potter sedang dipinjam)
