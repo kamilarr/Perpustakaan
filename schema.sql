@@ -14,7 +14,7 @@ CREATE TABLE books (
 -- Insert dummy buku
 INSERT INTO books (judul, penulis, kategori, stok) VALUES
 ('Laskar Pelangi', 'Andrea Hirata', 'Novel', '5'),
-('Algoritma dan Pemrograman', 'Rinaldi Munir', 'Pendidikan', '3'),
-('Harry Potter and the Sorcerer''s Stone', 'J.K. Rowling', 'Fantasy', '2'),
-('Filosofi Teras', 'Henry Manampiring', 'Self Development', '4'),
-('Clean Code', 'Robert C. Martin', 'Pendidikan', '2');
+('Algoritma dan Pemrograman', 'Rinaldi Munir', 'Pendidikan', '5'),
+('Harry Potter and the Sorcerer''s Stone', 'J.K. Rowling', 'Fantasy', '5'),
+('Filosofi Teras', 'Henry Manampiring', 'Self Development', '5'),
+('Clean Code', 'Robert C. Martin', 'Pendidikan', '5');
