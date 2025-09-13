@@ -8,7 +8,7 @@ CREATE TABLE books (
     judul VARCHAR(255) NOT NULL,
     penulis VARCHAR(100) NOT NULL,
     kategori VARCHAR(50),
-    stok INT DEFAULT 1,
+    stok INT DEFAULT 1
 );
 
 -- Insert dummy buku
