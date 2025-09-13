@@ -23,6 +23,9 @@ $bookImage = "https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&
 </head>
 <body class="min-h-screen bg-gradient-to-br from-stone-50 to-stone-200 text-stone-800">
 
+  <!-- Navbar -->
+  <?php include __DIR__ . '/navbar.php'; ?>
+
   <!-- Hero Header -->
   <header class="relative h-[300px] md:h-[400px] w-full">
     <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1920&auto=format&fit=crop"

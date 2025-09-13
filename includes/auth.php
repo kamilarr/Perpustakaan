@@ -8,12 +8,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
 
     // Query cek user di db_peminjaman
-    $stmt = $conn_peminjaman->prepare("SELECT user_id, username, password FROM users WHERE username = ?");
+    $stmt = $conn_peminjaman->prepare("SELECT user_id, username, password, role FROM users WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $result = $stmt->get_result();
 
-    // Cek ada user atau tidak
     if ($result->num_rows === 1) {
         $row = $result->fetch_assoc();
 
@@ -22,9 +21,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Set session login
             $_SESSION['user_id'] = $row['user_id'];
             $_SESSION['username'] = $row['username'];
+            $_SESSION['role'] = $row['role']; // 🔥 penting!
 
             // Redirect ke halaman utama
-            header("Location: index.php");
+            header("Location: /pages/index.php");
             exit;
         } else {
             $error = "Password salah!";
