@@ -17,9 +17,10 @@ if (session_status() === PHP_SESSION_NONE) {
         <a href="/index.php" class="text-stone-700 hover:text-stone-900">Home</a>
 
         <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'user'): ?>
-          <a href="pages/history.php" class="text-stone-700 hover:text-stone-900">History</a>
+          <a href="history.php" class="text-stone-700 hover:text-stone-900">History</a>
         <?php elseif (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
-          <a href="pages/managemen.php" class="text-stone-700 hover:text-stone-900">Manajemen</a>
+          <a href="history.php" class="text-stone-700 hover:text-stone-900">History</a>
+          <a href="managemen.php" class="text-stone-700 hover:text-stone-900">Manajemen</a>
         <?php endif; ?>
 
         <?php if (isset($_SESSION['username'])): ?>
